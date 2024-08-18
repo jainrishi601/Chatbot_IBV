@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Interface</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="siriwave.umd.min.js"></script>
+</head>
+
+<body>
+  <div id="app-wrapper">
+    <!-- Background Image and Overlay -->
+    <div id="background"></div>
+    <div id="overlay"></div>
+
+    
+
+    <!-- Main Chat Area -->
+    <div id="chat-container">
+      <!-- Chat Messages -->
+      <div id="message-container">
+        <div id="response-container"></div>
+      </div>
+
+      <!-- User Input and Controls -->
+      <div id="input-container">
+        <input id="user-input" type="text" placeholder="Type a message..." autocomplete="off">
+        <button id="send-button">Send</button>
+        <button id="record-button">🎤</button>
+      </div>
+    </div>
+
+    <!-- Placeholder and Waveform -->
+    <div id="wave"></div>
+    <div id="input-placeholder">Start your conversation here...</div>
+  </div>
+
+  <script data-version="development" src="scripts.js" id="vfassistant"></script>
+</body>
+
+</html>

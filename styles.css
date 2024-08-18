@@ -1,0 +1,190 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0f0f0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* App Wrapper */
+#app-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Background and Overlay */
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('path-to-your-image.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+/* Credits for Image */
+#credits {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 0.8rem;
+  z-index: 5;
+  color: white;
+}
+
+#credits a {
+  color: #00acee;
+  text-decoration: none;
+}
+
+/* Main Chat Container */
+#chat-container {
+  position: relative;
+  z-index: 3;
+  background: white;
+  width: 90%;
+  max-width: 600px;
+  height: 80%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Message Container */
+#message-container {
+  flex: 1;
+  overflow-y: auto; /* Enables vertical scrollbar */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid #ddd; /* Optional border for debugging */
+}
+
+#response-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #e6f7ff;
+  color: #003366;
+}
+
+.bot-message {
+  align-self: flex-start;
+  background-color: #f0f0f0;
+  color: #333333;
+}
+
+/* Input and Button Styles */
+#input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1rem;
+  outline: none;
+}
+
+#send-button,
+#record-button {
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+#send-button:hover,
+#record-button:hover {
+  background-color: #0056b3;
+}
+
+/* Waveform */
+#wave {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 60px;
+  z-index: 4;
+  opacity: 0;
+}
+
+/* Placeholder */
+#input-placeholder {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  color: #bbb;
+  z-index: 4;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
